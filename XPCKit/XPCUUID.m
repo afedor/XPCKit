@@ -31,7 +31,7 @@
 
 +(XPCUUID *)uuid{
 	CFUUIDRef uuidRef = CFUUIDCreate(NULL);
-	XPCUUID *uuid = [[[self alloc] initWithUUIDRef:uuidRef] autorelease];
+	XPCUUID *uuid = [[self alloc] initWithUUIDRef:uuidRef];
 	CFRelease(uuidRef);
 	return uuid;
 }
@@ -60,7 +60,7 @@
 #undef CopyByte
 	
 	CFUUIDRef uuidRef = CFUUIDCreateFromUUIDBytes(NULL, uuidBytes);
-	XPCUUID *uuid = [[[self alloc] initWithUUIDRef:uuidRef] autorelease];
+	XPCUUID *uuid = [[self alloc] initWithUUIDRef:uuidRef];
 
 	CFRelease(uuidRef);
 	
@@ -97,7 +97,7 @@
 }
 
 -(NSString *)string{
-	return [((NSString *)CFMakeCollectable(CFUUIDCreateString(NULL, self.uuidRef))) autorelease];
+	return CFBridgingRelease(CFUUIDCreateString(NULL, self.uuidRef));
 }
 
 -(NSString *)description{
@@ -128,7 +128,6 @@
 		_uuidRef = nil;
 	}
 
-	[super dealloc];
 }
 
 @end

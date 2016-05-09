@@ -31,7 +31,7 @@
 		}
 		return true;
 	});
-	return [[array copy] autorelease];
+	return [array copy];
 }
 
 -(xpc_object_t)newXPCObject{

@@ -55,6 +55,8 @@ void XPCSetLogLevel(XPCLogLevel inLogLevel);
 //     (i.e. target and object must conform to NSCoding when connection is not nil).
 // When XPCConnection is nil (e.g. running on Snow Leopard) message will be dispatched asynchronously via GCD.
 
-void XPCPerformSelectorAsync(XPCConnection *inConnection,
+extern void XPCPerformSelectorAsync(XPCConnection *inConnection,
                              id inTarget, SEL inSelector, id inObject,
                              XPCReturnValueHandler inCompletionHandler);
+
+extern id XPCKitInvokeSelector(id inTarget, SEL inSelector, id inObject, NSError **perror);

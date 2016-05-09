@@ -57,14 +57,7 @@ void XPCPerformSelectorAsync(XPCConnection *inConnection,
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0),^()
                        {
                            NSError* error = nil;
-                           id result = nil;
-                           
-                           if (objectCopy) {
-                               result = [targetCopy performSelector:inSelector withObject:objectCopy withObject:(id)&error];
-                           } else {
-                               result = [targetCopy performSelector:inSelector withObject:(id)&error];
-                           }
-                           
+                           id result = XPCKitInvokeSelector(targetCopy, inSelector, objectCopy, &error);
                            dispatch_async(currentQueue,^()
                                           {
                                               inReturnHandler(result, error);
@@ -74,6 +67,28 @@ void XPCPerformSelectorAsync(XPCConnection *inConnection,
     }
 }
 
+id XPCKitInvokeSelector(id inTarget, SEL inSelector, id inObject, NSError **perror)
+{
+  __unsafe_unretained id ierror = nil;
+  __unsafe_unretained id *errorPtr = &ierror;
+  void *tempResult;
+  int index = 2;
+  __unsafe_unretained id unsafeObject = inObject;
+  NSInvocation *invocation = [NSInvocation invocationWithMethodSignature: [inTarget methodSignatureForSelector: inSelector]];
+  [invocation setTarget: inTarget];
+  [invocation setSelector: inSelector];
+  // Note: Indexes 0 and 1 correspond to the implicit arguments self and _cmd,
+  // which are set using setTarget and setSelector.
+  if (inObject)
+    [invocation setArgument: &unsafeObject atIndex: index++];
+  [invocation setArgument: &errorPtr atIndex: index++];
+  [invocation retainArguments];
+  [invocation invoke];
+  [invocation getReturnValue: &tempResult];
+  if (perror)
+    *perror = ierror;
+  return (__bridge id)tempResult;
+}
 
 #pragma mark - Log Levels
 

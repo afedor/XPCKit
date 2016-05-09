@@ -13,15 +13,11 @@
 		1E5F84AB13E10DB700234F31 /* XPCService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F84A713E10DB700234F31 /* XPCService.m */; };
 		1E835CB113DF748000338391 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD0B613DE79D200D5AEC3 /* Foundation.framework */; };
 		1E835CB313DF74BF00338391 /* XPCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD0CF13DE9FAB00D5AEC3 /* XPCKit.framework */; };
-		1E835CB513DF74C900338391 /* XPCKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD0CF13DE9FAB00D5AEC3 /* XPCKit.framework */; };
+		1E835CB513DF74C900338391 /* XPCKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD0CF13DE9FAB00D5AEC3 /* XPCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		1EB022A5141D9F3700BCC1FB /* NSDate+XPCParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EB022A3141D9F3700BCC1FB /* NSDate+XPCParse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EB022A6141D9F3700BCC1FB /* NSDate+XPCParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EB022A3141D9F3700BCC1FB /* NSDate+XPCParse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EB022A7141D9F3700BCC1FB /* NSDate+XPCParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB022A4141D9F3700BCC1FB /* NSDate+XPCParse.m */; };
 		1EB022A8141D9F3700BCC1FB /* NSDate+XPCParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB022A4141D9F3700BCC1FB /* NSDate+XPCParse.m */; };
-		1EEDD03E13DD485400D5AEC3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD03D13DD485400D5AEC3 /* SenTestingKit.framework */; };
-		1EEDD04813DD485400D5AEC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EEDD04613DD485400D5AEC3 /* InfoPlist.strings */; };
-		1EEDD04A13DD485400D5AEC3 /* XPCKitTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 1EEDD04913DD485400D5AEC3 /* XPCKitTests.h */; };
-		1EEDD04C13DD485400D5AEC3 /* XPCKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEDD04B13DD485400D5AEC3 /* XPCKitTests.m */; };
 		1EEDD06113DD48BB00D5AEC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EEDD05F13DD48BB00D5AEC3 /* InfoPlist.strings */; };
 		1EEDD06313DD48BB00D5AEC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEDD06213DD48BB00D5AEC3 /* main.m */; };
 		1EEDD06713DD48BB00D5AEC3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1EEDD06513DD48BB00D5AEC3 /* Credits.rtf */; };
@@ -29,7 +25,7 @@
 		1EEDD06D13DD48BC00D5AEC3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EEDD06B13DD48BC00D5AEC3 /* MainMenu.xib */; };
 		1EEDD07B13DD48D800D5AEC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EEDD07913DD48D800D5AEC3 /* InfoPlist.strings */; };
 		1EEDD07E13DD48D800D5AEC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEDD07D13DD48D800D5AEC3 /* main.m */; };
-		1EEDD08513DD498900D5AEC3 /* com.mustacheware.TestService.xpc in Copy Services */ = {isa = PBXBuildFile; fileRef = 1EEDD07513DD48D800D5AEC3 /* com.mustacheware.TestService.xpc */; };
+		1EEDD08513DD498900D5AEC3 /* com.mustacheware.TestService.xpc in Copy Services */ = {isa = PBXBuildFile; fileRef = 1EEDD07513DD48D800D5AEC3 /* com.mustacheware.TestService.xpc */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		1EEDD08813DD508C00D5AEC3 /* XPCConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EEDD08613DD508C00D5AEC3 /* XPCConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EEDD08913DD508C00D5AEC3 /* XPCConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEDD08713DD508C00D5AEC3 /* XPCConnection.m */; };
 		1EEDD08C13DDC34800D5AEC3 /* NSDictionary+XPCParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EEDD08A13DDC34800D5AEC3 /* NSDictionary+XPCParse.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,7 +55,6 @@
 		1EEDD0E913DEA07700D5AEC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD0B613DE79D200D5AEC3 /* Foundation.framework */; };
 		1EEDD0EA13DEA08E00D5AEC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD0B613DE79D200D5AEC3 /* Foundation.framework */; };
 		1EEDD0EC13DEA0A400D5AEC3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD0EB13DEA0A400D5AEC3 /* Cocoa.framework */; };
-		1EEDD0EE13DEB02000D5AEC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD0ED13DEB01F00D5AEC3 /* Foundation.framework */; };
 		1EEDD0F113DEB97000D5AEC3 /* XPCUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EEDD0EF13DEB96F00D5AEC3 /* XPCUUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EEDD0F213DEB97000D5AEC3 /* XPCUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EEDD0EF13DEB96F00D5AEC3 /* XPCUUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EEDD0F313DEB97000D5AEC3 /* XPCUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEDD0F013DEB97000D5AEC3 /* XPCUUID.m */; };
@@ -94,17 +89,11 @@
 		30DF8D5814EBC03900E5E876 /* XPCMessage+XPCKitInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF8D5414EBC03900E5E876 /* XPCMessage+XPCKitInternal.m */; };
 		30E9DAFF14ED12480070A6A4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E9DAFE14ED12480070A6A4 /* Security.framework */; };
 		30E9DB0114ED139F0070A6A4 /* XPCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD0CF13DE9FAB00D5AEC3 /* XPCKit.framework */; };
-		30E9DB0214ED13DA0070A6A4 /* XPCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD0CF13DE9FAB00D5AEC3 /* XPCKit.framework */; };
+		9FFC64E91CE0FDE8008D977A /* XPCKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFC64E81CE0FDE8008D977A /* XPCKitTests.m */; };
+		9FFC64EB1CE0FDE8008D977A /* XPCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD0CF13DE9FAB00D5AEC3 /* XPCKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1EEDD04013DD485400D5AEC3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EEDD01F13DD485400D5AEC3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1EEDD02713DD485400D5AEC3;
-			remoteInfo = XPCKit;
-		};
 		1EEDD08213DD497400D5AEC3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1EEDD01F13DD485400D5AEC3 /* Project object */;
@@ -124,6 +113,13 @@
 			containerPortal = 1EEDD01F13DD485400D5AEC3 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1EEDD02713DD485400D5AEC3;
+			remoteInfo = XPCKit;
+		};
+		9FFC64EC1CE0FDE8008D977A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EEDD01F13DD485400D5AEC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EEDD0CE13DE9FAB00D5AEC3;
 			remoteInfo = XPCKit;
 		};
 /* End PBXContainerItemProxy section */
@@ -161,12 +157,7 @@
 		1EEDD02813DD485400D5AEC3 /* libXPCKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXPCKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEDD03313DD485400D5AEC3 /* XPCKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XPCKit-Prefix.pch"; sourceTree = "<group>"; };
 		1EEDD03413DD485400D5AEC3 /* XPCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPCKit.h; sourceTree = "<group>"; };
-		1EEDD03C13DD485400D5AEC3 /* XPCKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPCKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEDD03D13DD485400D5AEC3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		1EEDD04513DD485400D5AEC3 /* XPCKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XPCKitTests-Info.plist"; sourceTree = "<group>"; };
-		1EEDD04713DD485400D5AEC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1EEDD04913DD485400D5AEC3 /* XPCKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPCKitTests.h; sourceTree = "<group>"; };
-		1EEDD04B13DD485400D5AEC3 /* XPCKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPCKitTests.m; sourceTree = "<group>"; };
 		1EEDD05913DD48BB00D5AEC3 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEDD05E13DD48BB00D5AEC3 /* TestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestApp-Info.plist"; sourceTree = "<group>"; };
 		1EEDD06013DD48BB00D5AEC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -219,6 +210,9 @@
 		30DF8D5314EBC03900E5E876 /* XPCMessage+XPCKitInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XPCMessage+XPCKitInternal.h"; sourceTree = "<group>"; };
 		30DF8D5414EBC03900E5E876 /* XPCMessage+XPCKitInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XPCMessage+XPCKitInternal.m"; sourceTree = "<group>"; };
 		30E9DAFE14ED12480070A6A4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9FFC64E61CE0FDE8008D977A /* XPCKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPCKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FFC64E81CE0FDE8008D977A /* XPCKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPCKitTests.m; sourceTree = "<group>"; };
+		9FFC64EA1CE0FDE8008D977A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,16 +221,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EEDD0E913DEA07700D5AEC3 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1EEDD03813DD485400D5AEC3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				30E9DB0214ED13DA0070A6A4 /* XPCKit.framework in Frameworks */,
-				1EEDD0EE13DEB02000D5AEC3 /* Foundation.framework in Frameworks */,
-				1EEDD03E13DD485400D5AEC3 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +252,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FFC64E31CE0FDE8008D977A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FFC64EB1CE0FDE8008D977A /* XPCKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -275,9 +267,9 @@
 			isa = PBXGroup;
 			children = (
 				1EEDD03113DD485400D5AEC3 /* XPCKit */,
-				1EEDD04313DD485400D5AEC3 /* XPCKitTests */,
 				1EEDD05C13DD48BB00D5AEC3 /* TestApp */,
 				1EEDD07613DD48D800D5AEC3 /* TestService */,
+				9FFC64E71CE0FDE8008D977A /* XPCKitTests */,
 				1EEDD02A13DD485400D5AEC3 /* Frameworks */,
 				1EEDD02913DD485400D5AEC3 /* Products */,
 			);
@@ -287,10 +279,10 @@
 			isa = PBXGroup;
 			children = (
 				1EEDD02813DD485400D5AEC3 /* libXPCKit.a */,
-				1EEDD03C13DD485400D5AEC3 /* XPCKitTests.octest */,
 				1EEDD05913DD48BB00D5AEC3 /* TestApp.app */,
 				1EEDD07513DD48D800D5AEC3 /* com.mustacheware.TestService.xpc */,
 				1EEDD0CF13DE9FAB00D5AEC3 /* XPCKit.framework */,
+				9FFC64E61CE0FDE8008D977A /* XPCKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -338,25 +330,6 @@
 				1EEDD0D313DE9FAB00D5AEC3 /* XPCKit-Info.plist */,
 				1EEDD0D413DE9FAB00D5AEC3 /* InfoPlist.strings */,
 				1EEDD03313DD485400D5AEC3 /* XPCKit-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1EEDD04313DD485400D5AEC3 /* XPCKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				1EEDD04913DD485400D5AEC3 /* XPCKitTests.h */,
-				1EEDD04B13DD485400D5AEC3 /* XPCKitTests.m */,
-				1EEDD04413DD485400D5AEC3 /* Supporting Files */,
-			);
-			path = XPCKitTests;
-			sourceTree = "<group>";
-		};
-		1EEDD04413DD485400D5AEC3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1EEDD04513DD485400D5AEC3 /* XPCKitTests-Info.plist */,
-				1EEDD04613DD485400D5AEC3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -438,6 +411,15 @@
 			path = ThirdParty;
 			sourceTree = "<group>";
 		};
+		9FFC64E71CE0FDE8008D977A /* XPCKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FFC64E81CE0FDE8008D977A /* XPCKitTests.m */,
+				9FFC64EA1CE0FDE8008D977A /* Info.plist */,
+			);
+			path = XPCKitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -507,25 +489,6 @@
 			productReference = 1EEDD02813DD485400D5AEC3 /* libXPCKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		1EEDD03B13DD485400D5AEC3 /* XPCKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1EEDD05213DD485400D5AEC3 /* Build configuration list for PBXNativeTarget "XPCKitTests" */;
-			buildPhases = (
-				1EEDD03713DD485400D5AEC3 /* Sources */,
-				1EEDD03813DD485400D5AEC3 /* Frameworks */,
-				1EEDD03913DD485400D5AEC3 /* Resources */,
-				1EEDD03A13DD485400D5AEC3 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1EEDD04113DD485400D5AEC3 /* PBXTargetDependency */,
-			);
-			name = XPCKitTests;
-			productName = XPCKitTests;
-			productReference = 1EEDD03C13DD485400D5AEC3 /* XPCKitTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 		1EEDD05813DD48BB00D5AEC3 /* TestApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1EEDD06E13DD48BC00D5AEC3 /* Build configuration list for PBXNativeTarget "TestApp" */;
@@ -583,14 +546,38 @@
 			productReference = 1EEDD0CF13DE9FAB00D5AEC3 /* XPCKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		9FFC64E51CE0FDE8008D977A /* XPCKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FFC64EE1CE0FDE8008D977A /* Build configuration list for PBXNativeTarget "XPCKitTests" */;
+			buildPhases = (
+				9FFC64E21CE0FDE8008D977A /* Sources */,
+				9FFC64E31CE0FDE8008D977A /* Frameworks */,
+				9FFC64E41CE0FDE8008D977A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FFC64ED1CE0FDE8008D977A /* PBXTargetDependency */,
+			);
+			name = XPCKitTests;
+			productName = XPCKitTests;
+			productReference = 9FFC64E61CE0FDE8008D977A /* XPCKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1EEDD01F13DD485400D5AEC3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastTestingUpgradeCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Mustacheware;
+				TargetAttributes = {
+					9FFC64E51CE0FDE8008D977A = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
 			};
 			buildConfigurationList = 1EEDD02213DD485400D5AEC3 /* Build configuration list for PBXProject "XPCKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -608,21 +595,12 @@
 				1EEDD02713DD485400D5AEC3 /* libXPCKit */,
 				1EEDD05813DD48BB00D5AEC3 /* TestApp */,
 				1EEDD07413DD48D800D5AEC3 /* TestService */,
-				1EEDD03B13DD485400D5AEC3 /* XPCKitTests */,
+				9FFC64E51CE0FDE8008D977A /* XPCKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1EEDD03913DD485400D5AEC3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1EEDD04813DD485400D5AEC3 /* InfoPlist.strings in Resources */,
-				1EEDD04A13DD485400D5AEC3 /* XPCKitTests.h in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1EEDD05713DD48BB00D5AEC3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -651,23 +629,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1EEDD03A13DD485400D5AEC3 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
+		9FFC64E41CE0FDE8008D977A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-/* End PBXShellScriptBuildPhase section */
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1EEDD02413DD485400D5AEC3 /* Sources */ = {
@@ -688,14 +657,6 @@
 				300687CD14EA62B2006E8070 /* XPCMessage.m in Sources */,
 				30DF8D5814EBC03900E5E876 /* XPCMessage+XPCKitInternal.m in Sources */,
 				30DE545E150790C200C06806 /* XPCUtilities.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1EEDD03713DD485400D5AEC3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1EEDD04C13DD485400D5AEC3 /* XPCKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,14 +700,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FFC64E21CE0FDE8008D977A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FFC64E91CE0FDE8008D977A /* XPCKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1EEDD04113DD485400D5AEC3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1EEDD02713DD485400D5AEC3 /* libXPCKit */;
-			targetProxy = 1EEDD04013DD485400D5AEC3 /* PBXContainerItemProxy */;
-		};
 		1EEDD08313DD497400D5AEC3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1EEDD07413DD48D800D5AEC3 /* TestService */;
@@ -762,17 +726,14 @@
 			target = 1EEDD02713DD485400D5AEC3 /* libXPCKit */;
 			targetProxy = 1EEDD0B813DE7A0D00D5AEC3 /* PBXContainerItemProxy */;
 		};
+		9FFC64ED1CE0FDE8008D977A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EEDD0CE13DE9FAB00D5AEC3 /* XPCKit */;
+			targetProxy = 9FFC64EC1CE0FDE8008D977A /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1EEDD04613DD485400D5AEC3 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1EEDD04713DD485400D5AEC3 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		1EEDD05F13DD48BB00D5AEC3 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -820,17 +781,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -846,6 +810,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -854,17 +819,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -881,6 +848,7 @@
 		1EEDD05013DD485400D5AEC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XPCKit/XPCKit-Prefix.pch";
 				PRODUCT_NAME = XPCKit;
@@ -890,43 +858,10 @@
 		1EEDD05113DD485400D5AEC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XPCKit/XPCKit-Prefix.pch";
 				PRODUCT_NAME = XPCKit;
-			};
-			name = Release;
-		};
-		1EEDD05313DD485400D5AEC3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "XPCKit/XPCKit-Prefix.pch";
-				INFOPLIST_FILE = "XPCKitTests/XPCKitTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		1EEDD05413DD485400D5AEC3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "XPCKit/XPCKit-Prefix.pch";
-				INFOPLIST_FILE = "XPCKitTests/XPCKitTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -941,6 +876,7 @@
 				INFOPLIST_FILE = "TestApp/TestApp-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks /Library/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mustacheware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -957,6 +893,7 @@
 				INFOPLIST_FILE = "TestApp/TestApp-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks /Library/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mustacheware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -977,6 +914,7 @@
 					"-ObjC",
 					"-all_load",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "${EXECUTABLE_NAME}";
 				PRODUCT_NAME = "com.mustacheware.$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = xpc;
@@ -998,6 +936,7 @@
 					"-ObjC",
 					"-all_load",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "${EXECUTABLE_NAME}";
 				PRODUCT_NAME = "com.mustacheware.$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = xpc;
@@ -1007,6 +946,7 @@
 		1EEDD0DC13DE9FAB00D5AEC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1016,6 +956,7 @@
 				INFOPLIST_FILE = "XPCKit/XPCKit-Info.plist";
 				INSTALL_PATH = "@rpath";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mustacheware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1024,6 +965,7 @@
 		1EEDD0DD13DE9FAB00D5AEC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1033,8 +975,58 @@
 				INFOPLIST_FILE = "XPCKit/XPCKit-Info.plist";
 				INSTALL_PATH = "@rpath";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mustacheware.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		9FFC64EF1CE0FDE8008D977A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = XPCKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.t1visions.XPCKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9FFC64F01CE0FDE8008D977A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = XPCKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.t1visions.XPCKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -1055,15 +1047,6 @@
 			buildConfigurations = (
 				1EEDD05013DD485400D5AEC3 /* Debug */,
 				1EEDD05113DD485400D5AEC3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1EEDD05213DD485400D5AEC3 /* Build configuration list for PBXNativeTarget "XPCKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1EEDD05313DD485400D5AEC3 /* Debug */,
-				1EEDD05413DD485400D5AEC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1094,6 +1077,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9FFC64EE1CE0FDE8008D977A /* Build configuration list for PBXNativeTarget "XPCKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FFC64EF1CE0FDE8008D977A /* Debug */,
+				9FFC64F01CE0FDE8008D977A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
