@@ -42,13 +42,13 @@
 
 + (id)message
 {
-    return [[[XPCMessage alloc] init] autorelease];
+    return [[XPCMessage alloc] init];
 }
 
 
 + (id)messageWithXPCDictionary:(xpc_object_t)inXPCDictionary
 {
-    return [[[XPCMessage alloc] initWithXPCDictionary:inXPCDictionary] autorelease];
+    return [[XPCMessage alloc] initWithXPCDictionary:inXPCDictionary];
 }
 
 
@@ -62,19 +62,19 @@
 
 + (id)messageReplyForMessage:(XPCMessage *)inOriginalMessage
 {
-    return [[[XPCMessage alloc] initReplyForMessage:inOriginalMessage] autorelease];
+    return [[XPCMessage alloc] initReplyForMessage:inOriginalMessage];
 }
 
 
 + (id)messageWithObjects:(NSArray *)inObjects forKeys:(NSArray *)inKeys
 {
-    return [[[XPCMessage alloc] initWithObjects:inObjects forKeys:inKeys] autorelease];
+    return [[XPCMessage alloc] initWithObjects:inObjects forKeys:inKeys];
 }
 
 
 + (id)messageWithObject:(id)inObject forKey:(NSString *)inKey
 {
-    return [[[XPCMessage alloc] initWithObject:inObject forKey:inKey] autorelease];
+    return [[XPCMessage alloc] initWithObject:inObject forKey:inKey];
 }
 
 
@@ -87,7 +87,7 @@
     this = [this _initWithFirstObject:firstObject arguments:argumentList];
     va_end(argumentList);
     
-    return [this autorelease];
+    return this;
 }
 
 
@@ -95,7 +95,7 @@
 
 + (id)messageWithSelector:(SEL)inSelector target:(id)inTarget object:(id)inObject
 {
-    return [[[XPCMessage alloc] initWithSelector:inSelector target:inTarget object:inObject] autorelease];
+    return [[XPCMessage alloc] initWithSelector:inSelector target:inTarget object:inObject];
 }
 
 
@@ -240,7 +240,6 @@
     if (_XPCDictionary) {
         xpc_release(_XPCDictionary);
     }
-    [super dealloc];
 }
 
 
@@ -389,14 +388,7 @@
         XPCMessage *reply = [XPCMessage messageReplyForMessage:self];
         
         NSError* error = nil;
-        id result = nil;
-        
-        if (object) {
-            result = [target performSelector:selector withObject:object withObject:(id)&error];
-        } else {
-            result = [target performSelector:selector withObject:(id)&error];
-        }
-        
+        id result = XPCKitInvokeSelector(target, selector, object, &error);
         if (result) [reply setObject:result forKey:@"result"];
         if (error) [reply setObject:error forKey:@"error"];
 

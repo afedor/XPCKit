@@ -42,7 +42,6 @@
 
 -(id)initWithConnection:(xpc_connection_t)connection{
 	if(!connection){
-		[self release];
 		return nil;
 	}
 	
@@ -68,11 +67,9 @@
 		_connection = NULL;
 	}
     if(_eventHandler){
-        [_eventHandler release];
         _eventHandler = nil;
     }
 	
-	[super dealloc];
 }
 
 -(void)setDispatchQueue:(dispatch_queue_t)dispatchQueue{
@@ -216,8 +213,6 @@
                     replyHandler(replyMessage);
                 }
 				
-				[replyHandler release];
-				[errorHandler release];
                 dispatch_release(replyQueue);
             });
         });
@@ -243,12 +238,10 @@
          NSError *error = nil;
          id returnValue = [inReply invocationReturnValue:&error];
          returnHandler(returnValue, error);             // Handle method-level errors here
-         [returnHandler release];
      }
                  errorHandler:^(NSError* inError)       // Handle connection-level errors here
      {
          returnHandler(nil, inError);
-         [returnHandler release];
      }];
 }
 

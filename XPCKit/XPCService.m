@@ -23,7 +23,6 @@ static void XPCServiceConnectionHandler(xpc_connection_t handler);
 static void XPCServiceConnectionHandler(xpc_connection_t handler){
 	XPCConnection *connection = [[XPCConnection alloc] initWithConnection:handler];
 	[[NSNotificationCenter defaultCenter] postNotificationName:XPCConnectionReceivedNotification object:connection];
-	[connection release];
 }
 
 @implementation XPCService
@@ -67,11 +66,9 @@ static void XPCServiceConnectionHandler(xpc_connection_t handler){
 }
 
 +(void)runServiceWithConnectionHandler:(XPCConnectionHandler)connectionHandler{
-	XPCService *service = [[XPCService alloc] initWithConnectionHandler:connectionHandler];
+	(void)[[XPCService alloc] initWithConnectionHandler:connectionHandler];
 	
 	[XPCService runService];
-	
-	[service release];
 }
 
 @end

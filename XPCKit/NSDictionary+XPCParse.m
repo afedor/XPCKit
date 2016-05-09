@@ -32,7 +32,7 @@
         }
         return true;
     });
-    return [[dict copy] autorelease];
+    return [dict copy];
 }
 
 -(xpc_object_t)newXPCObject{
