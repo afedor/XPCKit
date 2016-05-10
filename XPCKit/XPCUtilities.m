@@ -52,8 +52,7 @@ void XPCPerformSelectorAsync(XPCConnection *inConnection,
         id objectCopy = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:inObject]];
         
         dispatch_queue_t currentQueue = dispatch_get_current_queue();
-        dispatch_retain(currentQueue);
-        
+      
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0),^()
                        {
                            NSError* error = nil;
@@ -61,7 +60,6 @@ void XPCPerformSelectorAsync(XPCConnection *inConnection,
                            dispatch_async(currentQueue,^()
                                           {
                                               inReturnHandler(result, error);
-                                              dispatch_release(currentQueue);
                                           });
                        });
     }

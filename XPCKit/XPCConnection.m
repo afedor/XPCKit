@@ -33,11 +33,7 @@
 
 - (id)initWithServiceName:(NSString *)serviceName{
 	xpc_connection_t connection = xpc_connection_create([serviceName cStringUsingEncoding:NSUTF8StringEncoding], NULL);
-	self = [self initWithConnection:connection];
-    if (connection) {
-        xpc_release(connection);
-    }
-	return self;
+	return [self initWithConnection:connection];
 }
 
 -(id)initWithConnection:(xpc_connection_t)connection{
@@ -46,15 +42,11 @@
 	}
 	
 	if(self = [super init]){
-		_connection = xpc_retain(connection);
+		_connection = connection;
 		[self receiveConnection:_connection];
 
 		dispatch_queue_t queue = dispatch_queue_create(xpc_connection_get_name(_connection), 0);
 		self.dispatchQueue = queue;
-        if (queue) {
-            dispatch_release(queue);
-        }
-		
 		[self resume];
 	}
 	return self;
@@ -63,7 +55,6 @@
 -(void)dealloc{
 	if(_connection){
 		xpc_connection_cancel(_connection);
-		xpc_release(_connection);
 		_connection = NULL;
 	}
     if(_eventHandler){
@@ -73,26 +64,11 @@
 }
 
 -(void)setDispatchQueue:(dispatch_queue_t)dispatchQueue{
-	if(dispatchQueue){
-		dispatch_retain(dispatchQueue);
-	}
-	
-	if(_dispatchQueue){
-		dispatch_release(_dispatchQueue);
-	}
 	_dispatchQueue = dispatchQueue;
-	
 	xpc_connection_set_target_queue(self.connection, self.dispatchQueue);
 }
 
 -(void)setReplyDispatchQueue:(dispatch_queue_t)dispatchQueue{
-	if(dispatchQueue){
-		dispatch_retain(dispatchQueue);
-	}
-	
-	if(_replyDispatchQueue){
-		dispatch_release(_replyDispatchQueue);
-	}
 	_replyDispatchQueue = dispatchQueue;
 }
 
@@ -111,7 +87,6 @@
             xpc_object_t errorDict = xpc_dictionary_create(NULL, NULL, 0);
             xpc_dictionary_set_value(errorDict, "__XPCError", object);
             message = [XPCMessage messageWithXPCDictionary:errorDict];
-            xpc_release(errorDict);
         }else{
             message = [XPCMessage messageWithXPCDictionary:object];
             
@@ -181,8 +156,7 @@
         [inMessage setNeedsDirectReply:YES];
         
         dispatch_queue_t replyQueue = self.replyDispatchQueue ? self.replyDispatchQueue : dispatch_get_current_queue();
-        dispatch_retain(replyQueue);
-        
+      
 		XPCReplyHandler replyHandler = [inReplyHandler copy];
 		XPCErrorHandler errorHandler = [inErrorHandler copy];
 		
@@ -212,8 +186,6 @@
                     XPCMessage *replyMessage = [XPCMessage messageWithXPCDictionary:event];
                     replyHandler(replyMessage);
                 }
-				
-                dispatch_release(replyQueue);
             });
         });
     }
