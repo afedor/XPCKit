@@ -127,4 +127,23 @@
   XCTAssertEqualObjects(inTestSet, outTestSet,@"Input object %@ is not equal to output object %@", inTestSet, outTestSet);
 }
 
+- (void)testIOSurface
+{
+  char pixelFormat[4] = {'A','R','G','B'};
+  uint32_t width = 640;
+  uint32_t height = 480;
+  NSDictionary *mdict = @{
+                          (__bridge NSString *)kIOSurfaceBytesPerRow : @(width*4),
+                          (__bridge NSString *)kIOSurfaceBytesPerElement : @(4),
+                          (__bridge NSString *)kIOSurfaceWidth : @(width),
+                          (__bridge NSString *)kIOSurfaceHeight : @(height),
+                          (__bridge NSString *)kIOSurfacePixelFormat : @((uint32_t)pixelFormat),
+                          (__bridge NSString *)kIOSurfaceAllocSize : @(width*height*4)
+                          };
+  IOSurfaceRef surfaceRef = IOSurfaceCreate((__bridge CFDictionaryRef)[mdict mutableCopy]);
+  XPCIOSurface *surface = [[XPCIOSurface alloc] initWithSurfaceRef: surfaceRef];
+  
+  [self runEqualityOfXPCRoundtripForObject: surface];
+}
+
 @end

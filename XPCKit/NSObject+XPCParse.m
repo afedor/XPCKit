@@ -46,9 +46,12 @@
 	}else if(type == XPC_TYPE_FD){
 		object = [NSFileHandle fileHandleWithXPCObject:xpcObject];
     }else if(type == XPC_TYPE_BOOL || type == XPC_TYPE_UINT64 || type == XPC_TYPE_INT64 || type == XPC_TYPE_DOUBLE){
-        object = [NSNumber numberWithXPCObject:xpcObject];
-	}
-    return object;
+      object = [NSNumber numberWithXPCObject:xpcObject];
+    }
+    else if([[(__bridge NSObject *)type className] isEqualToString: @"OS_xpc_mach_send"]){
+      object = [XPCIOSurface surfaceRefWithXPCObject: xpcObject];
+    }
+  return object;
 }
 
 

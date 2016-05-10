@@ -33,3 +33,4 @@
 #import "NSFileHandle+XPCParse.h"
 
 #import "XPCUUID.h"
+#import "XPCIOSurface.h"
