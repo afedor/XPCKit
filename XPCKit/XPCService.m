@@ -19,8 +19,7 @@
 
 #import "XPCService.h"
 
-static void XPCServiceConnectionHandler(xpc_connection_t handler);
-static void XPCServiceConnectionHandler(xpc_connection_t handler){
+void XPCServiceConnectionHandler(xpc_connection_t handler){
 	XPCConnection *connection = [[XPCConnection alloc] initWithConnection:handler];
 	[[NSNotificationCenter defaultCenter] postNotificationName:XPCConnectionReceivedNotification object:connection];
 }
