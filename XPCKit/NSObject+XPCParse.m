@@ -51,6 +51,12 @@
     else if([[(__bridge NSObject *)type className] isEqualToString: @"OS_xpc_mach_send"]){
       object = [XPCIOSurface surfaceRefWithXPCObject: xpcObject];
     }
+    else if (xpcObject == XPC_ERROR_CONNECTION_INTERRUPTED ||
+             xpcObject == XPC_ERROR_CONNECTION_INVALID ||
+             xpcObject == XPC_ERROR_KEY_DESCRIPTION ||
+             xpcObject == XPC_ERROR_TERMINATION_IMMINENT) {
+      object = [NSDictionary dictionaryWithContentsOfXPCObject: xpcObject];
+    }
   return object;
 }
 
